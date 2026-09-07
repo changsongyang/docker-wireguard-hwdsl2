@@ -10,8 +10,8 @@ WORKDIR /opt/src
 
 RUN set -x \
     && apk add --no-cache \
-         bash bind-tools coreutils iproute2 iptables iptables-legacy ip6tables \
-         wireguard-tools wireguard-go libqrencode-tools \
+         bash bind-tools ca-certificates coreutils iproute2 iptables iptables-legacy ip6tables \
+         wget wireguard-tools wireguard-go libqrencode-tools \
     && cd /sbin \
     && for fn in iptables iptables-save iptables-restore \
                  ip6tables ip6tables-save ip6tables-restore; do \
